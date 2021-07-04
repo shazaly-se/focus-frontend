@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-2">
+    <p>Classes </p>
+  </div>
+  <div class="col-md-8"></div>
+  <div class="col-md-2">
+
+    <a href="" class="btn btn-success" routerLink="/classes/create">New Class</a>
+  </div>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Maximum Student</th>
+        <th scope="col">Status</th>
+        <th scope="col">Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    
+  
+      <tr *ngFor="let class of classes">
+        <th scope="row">{{class.id}}</th>
+        <td scope="row">{{class.name}}</td>
+        <td scope="row">{{class.maximum_students}}</td>
+        <td scope="row">{{class.status}}</td>
+        <td scope="row">{{class.description}}</td>
+        <td>
+          <button class="btn btn-primary" routerLink="/classshow/{{class.id}}">Show Students</button>
+          <button class="btn btn-warning mx-2" routerLink="/classedit/{{class.id}}">Edit</button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+

@@ -1,0 +1,24 @@
+<p>students </p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">date of birth</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    
+  
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student.id}}</th>
+        <td scope="row">{{student.first_name}}</td>
+        <td scope="row">{{student.last_name}}</td>
+        <td scope="row">{{student.date_of_birth}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+

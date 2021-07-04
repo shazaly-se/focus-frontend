@@ -1,0 +1,36 @@
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form (ngSubmit)="saveStudentData()">
+          <div class="mb-3">
+            <label  class="form-label">First name</label>
+            <input type="text" class="form-control" name="first_name"   [(ngModel)]="studentmodel.first_name">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Last name</label>
+            <input type="text" name="last_name" class="form-control" [(ngModel)]="studentmodel.last_name">
+          </div>
+
+          <div class="mb-3">
+              <label  class="form-label">Class</label>
+              <select class="form-select" aria-label="Default select example" name="status"  [(ngModel)]="studentmodel.class_id">
+                  <option value="" > select </option>
+                  <option *ngFor="let obj of classArr" value="{{obj.id}}">{{obj.name}}</option>
+                  
+                  
+                </select>
+            </div>
+
+          <div class="mb-3">
+              <label  class="form-label">Date of birth</label>
+              <input type="date" name="date_of_birth" class="form-control" [(ngModel)]="studentmodel.date_of_birth" >
+             
+           </div>
+         
+            <button type="submit" class="btn btn-dark">Save Data</button>
+          </form>
+
+    </div>
+</div>
+
